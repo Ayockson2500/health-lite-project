@@ -128,7 +128,7 @@
 /* toggle menu section */
 
 .toggle-menu {
-    width: 540%;
+    width: 30%;
     height: 60vh;
     background: #40A3F8;
     opacity: .5;
@@ -136,7 +136,7 @@
     top: 5%;
     right: 0%;
     display: none;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     transition: 3s;
     animation-name: toggleAnimation;
@@ -145,13 +145,7 @@
 
 @keyframes toggleAnimation {
     0% {
-        width: 100%;
-    }
-    50% {
-        width: 50%;
-    }
-    100% {
-        width: 0%;
+        transform: translateY(-50%);
     }
 }
 
@@ -245,23 +239,6 @@
 .heading-sub-container-1-p {
     margin-top: 2rem;
     line-height: 1.5rem;
-    animation-name: moveleft;
-    animation-duration: 2s ease-in-out;
-    transition: 2s;
-}
-
-@keyframes moveLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    80% {
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
 }
 
 .heading-container {
@@ -294,19 +271,19 @@
 
 /* heading animation */
 
-.heading {
+.heading-sub-container-one {
     animation-name: moveRight;
-    animation-duration: 2s ease-in-out;
     transition: 2s;
+    animation-duration: 2s;
 }
 
 @keyframes moveRight {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateY(-100px);
     }
     80% {
-        transform: translateX(20px);
+        transform: translateX(20px)
     }
     100% {
         opacity: 1;
@@ -449,7 +426,7 @@
     border-radius: 5px;
     background: #FFFFFF;
     box-shadow: .1px .1px .1px .1px;
-    height: 375px;
+    height: 500px;
     padding: .5rem;
     width: 100%;
     cursor: pointer;
@@ -725,7 +702,7 @@
 
 /* ==========================Media Query Section==================================== */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
     /* header section */
     .menu-list {
         display: none;
@@ -754,12 +731,10 @@
         margin-bottom: 3%;
     }
     .sevices-sub-text-container {
-        margin-left: 0%;
-        text-align: center;
         margin: 2%;
     }
     .sevices-sub-text-container div {
-        margin-left: 28%;
+        margin-left: 0%;
     }
     .best-quality-sevices-container {
         flex-direction: column;
@@ -772,11 +747,14 @@
         grid-template-columns: repeat(1, 1fr);
         margin-bottom: 20%;
     }
+    .online-doctor-container {
+        height: 50rem;
+        margin-bottom: 2rem;
+    }
     /* certified-online-doctors-container */
     .online-doctor-container-display-grid {
         grid-template-columns: repeat(1, 1fr);
-        margin-bottom: 3%;
-        margin-bottom: 50%;
+        gap: 0;
     }
     .online-doctor-image-container-1 {
         background-repeat: no-repeat;
@@ -794,26 +772,42 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .online-doctors-button {
+        margin: 0;
+    }
     /* mobile app section */
     .google-play-container {
         transform: translateX(-20%);
+        display: flex;
+        gap: 1rem;
+        padding-left: 20%;
     }
     /* our clients section */
     .our-client-container {
         width: 100%;
         padding: 0 3.2%;
-        margin-bottom: 23%;
     }
     .our-client-sub-container {
         grid-template-columns: repeat(1, 1fr);
     }
-    /* change-your-life-container */
-    .book-appoinment-text {
-        font-size: 25px;
-        margin-top: 2rem;
+    .nav-icon {
+        display: none;
     }
-    .book-appoiment-btn {
-        padding: 1rem 3rem;
+    /* change-your-life-container */
+    .change-your-life-sub-container {
+        margin: 1.5rem 0;
+    }
+    .change-your-life-heading-container-1 {
+        width: 100%;
+        text-align: center;
+        padding-top: 10%;
+    }
+    .change-your-life-image-container {
+        width: 0%;
+    }
+    .book-appoinment-text {
+        font-size: 20px;
+        margin-top: 2rem;
     }
     .change-your-life-image-container img {
         display: none;
@@ -841,7 +835,7 @@
     }
     .new-sub-container-one-1 {
         display: flex;
-        padding-left: 25%;
+        padding-left: 35%;
         margin-top: 2%;
     }
     .subscribe-news-letter {
@@ -867,16 +861,41 @@
 }
 
 @media screen and (max-width: 320px) {
-    .footer-social-links {
-        display: none;
-    }
     .new-sub-container-one-1 {
         padding-left: 12%;
     }
-    .footer-content-1 {
-        display: none;
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .footer-li li {
-        margin-left: 2rem;
+    .footer-content-1 {
+        padding-left: 3.5rem;
+    }
+    .footer-social-links {
+        padding-left: 4rem;
+        margin: 1.5rem 0;
+    }
+    .online-doctor-container {
+        height: 30rem;
+        margin-bottom: 1rem;
+    }
+    .client-container {
+        margin-bottom: 1rem;
+    }
+    .our-client-sub-container {
+        gap: 0;
+    }
+    .change-your-life-container {
+        margin-top: 0;
+    }
+    /* mobile app section */
+    .google-play-container {
+        transform: translateX(0%);
+        gap: .2rem;
+        padding-left: 0%;
+    }
+    /* new-sub-container-one-2 */
+    .subscribe-news-letter {
+        width: 100%;
+        transform: translateX(0%);
     }
 }

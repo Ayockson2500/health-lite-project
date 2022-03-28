@@ -1,7 +1,19 @@
+const fixedmenuBarDisplay = document.querySelector('.sub-container-1')
+const toggleBar = document.querySelector('.toggle-bar')
+
+toggleBar.addEventListener('click', function(e) {
+    e.preventDefault()
+    console.log('click me')
+    fixedmenuBarDisplay.style.display = 'block'
+})
+
+
+
+
 const url = 'https://612b668c22bb490017893b1d.mockapi.io/health/v1/patients'
 
 const myPatientDetail = document.querySelector('#patient-detail')
-// const myPatientReport = document.querySelector('#patient-report')
+    // const myPatientReport = document.querySelector('#patient-report')
 
 fetch(url).then((Response) => {
     Response.json().then((data) => {
@@ -36,7 +48,7 @@ fetch(newUrl).then((Response) => {
                 <img src="./img/Group 9005.png" alt="">
                 <p class="font-family-roboto color-navy font-small-text">${list.title}</p>
             </div>`
-            } else if(list.type === 'interview') {
+            } else if (list.type === 'interview') {
                 myPatientReport.innerHTML += `<div class="activities-sub-container image-container-flex" id="patient-report">
                 <img src="./img/Group 9005.png" alt="">
                 <p class="font-family-roboto color-navy font-small-text">${list.title}</p>

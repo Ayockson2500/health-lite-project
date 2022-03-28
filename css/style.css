@@ -131,19 +131,20 @@
 
 .main-container {
     width: 100%;
-    display: grid;
-    grid-template-columns: 15% 85%;
 }
 
 
 /* sub-container-1 section */
+
 .sub-container {
     width: 100%;
 }
 
 .sub-container-1 {
-    width:100%;
-    padding-top:23%;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    padding-top: 3.7%;
 }
 
 .menu-logo {
@@ -196,6 +197,11 @@
 
 
 /* sub-container 2 section */
+
+.sub-container-2 {
+    width: 85%;
+    margin-left: 15%;
+}
 
 .sub-container-2-navbar {
     padding: 1.4% 0;
@@ -262,6 +268,7 @@
 }
 
 .sub-container-2-grid-flex {
+    width: 100%;
     display: grid;
     grid-template-columns: 70% 28%;
     gap: 2%;
@@ -439,16 +446,14 @@
 
 /* =========================Media query section====================================== */
 
-@media screen and (max-width: 1024px) {
-    .main-container {
-        grid-template-columns: 0% 100%;
+@media screen and (max-width: 768px) {
+    .sub-container-1 {
+        display: none;
     }
-    .sub-container-2-grid-flex {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        padding: 2.2%;
+    .sub-container-2 {
+        width: 100%;
+        margin-left: unset;
     }
-    /* .sub-container-2-navbar */
     .sub-container-2-navbar {
         padding: 1.4% 0;
         display: flex;
@@ -465,12 +470,6 @@
         cursor: pointer;
         margin-left: 2%;
     }
-    .toggle-display {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 635px) {
     .sub-container-2-flex img {
         display: none;
     }
@@ -487,5 +486,32 @@
     }
     .reverse-order-div-1 {
         margin-bottom: 2%;
+    }
+    .sub-content-container-1 {
+        margin-bottom: 1rem;
+    }
+    .font-small {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .sub-container-2-grid-flex {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2%;
+    }
+    .sub-content-container-2 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0%;
+    }
+    .content-container-2 {
+        margin-bottom: 1rem;
+    }
+    .admin-btn-container {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .8rem;
     }
 }
