@@ -4,7 +4,10 @@ const toggleBar = document.querySelector('.toggle-bar')
 toggleBar.addEventListener('click', function(e) {
     e.preventDefault()
     console.log('click me')
-    fixedmenuBarDisplay.style.display = 'block'
+    fixedmenuBarDisplay.style.display = 'block';
+    fixedmenuBarDisplay.style.marginTop = '5.1rem'
+    fixedmenuBarDisplay.style.width = '10rem'
+    fixedMenuText.style.display = 'none'
 })
 
 

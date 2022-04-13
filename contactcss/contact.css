@@ -95,20 +95,20 @@
 
 @keyframes toggleAnimation {
     0% {
-        width: 100%;
+        transform: translateX(-500px);
     }
-    50% {
+    /* 50% {
         width: 50%;
-    }
-    100% {
+    } */
+    /* 100% {
         width: 0%;
-    }
+    } */
 }
 
 .toggle-menu a {
     text-decoration: none;
     display: block;
-    padding: 1.2rem 1rem;
+    padding: 1rem;
     color: #FFFFFF;
 }
 
@@ -285,7 +285,7 @@ form .contact-btn {
 }
 
 .category {
-    margin-right: 5rem;
+    margin-right: 20%;
 }
 
 .newsletter-sub-container-2 li {
@@ -328,6 +328,9 @@ form .contact-btn {
     /* toggle menu section */
     .toggle-bar {
         display: block;
+    }
+    .toggle-menu {
+        margin-top: 2.5rem;
     }
     .heading {
         font-weight: 700;
@@ -395,18 +398,18 @@ form .contact-btn {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .new-sub-container-one-1 {
-        padding-left: 0%;
+        padding-left: 18%;
     }
     .footer {
         grid-template-columns: repeat(1, 1fr);
     }
     .footer-content-1 {
-        padding-left: 1rem;
+        padding-left: 20%;
     }
     .footer-social-links {
-        padding-left: 1rem;
+        padding-left: 20%;
         margin: 1.5rem 0;
     }
     .first-child {

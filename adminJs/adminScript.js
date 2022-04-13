@@ -7,6 +7,7 @@ toggleBar.addEventListener('click', function(e) {
     console.log('click me')
     fixedmenuBarDisplay.style.display = 'block';
     fixedmenuBarDisplay.style.marginTop = '4rem'
+    fixedmenuBarDisplay.style.width = '10rem'
     fixedMenuText.style.display = 'none'
 })
 
